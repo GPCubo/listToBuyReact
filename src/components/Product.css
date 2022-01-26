@@ -1,0 +1,30 @@
+.Product{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--gray20);
+    width: 100vw;
+}
+.Product__btn{
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 9999px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.Product__p{
+    font-weight: 600;
+    min-width: 200px;
+}
+.Product__input{
+    margin: 16px 0;
+}
+@media(max-width:376px){
+    .Product__p{
+        text-align: center;
+    }
+}

@@ -1,0 +1,13 @@
+.Header{
+    display: flex;
+    background-color: var(--primary);
+    color: white;
+    padding: 15px 0;
+}
+.Header__img{
+    margin-left: 16px;
+}
+.Header__h1{
+    margin:0 15px ;
+    font-size: 24px
+}

@@ -1,0 +1,22 @@
+.AddProduct{
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+}
+.AddProducts__label{
+    margin: 0 16px;
+    font-size: 14px;
+}
+.AddProducts__input{
+    border: none;
+    width: calc(100vw - 150px);
+    border-bottom: 1px solid var(--gray20);
+}
+.AddProducts__input:focus-visible{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--gray20);
+}
+.AddProducts__input:focus{
+    background-color: transparent;
+}
