@@ -5,12 +5,14 @@ const Product = ({product,handleReset}) => {
     
     const handleToSave = (e)=>{
         e.preventDefault()
+        // Verifica si la función fue ejecutada presionando Enter o a traves del botón
         const newValue = e.target.id === "ProductForm" ?
         e.target.firstElementChild.value
         :
         e.target.previousElementSibling.firstElementChild.value
 
         let localStorageData = JSON.parse(localStorage.getItem("Lista"))
+        // Despues de parsear la lista, busca el indice del array para editar su valor
         let productIndexOf = localStorageData.indexOf(product)
         localStorageData[productIndexOf] = newValue
         localStorage.setItem("Lista",JSON.stringify(localStorageData))
@@ -19,6 +21,7 @@ const Product = ({product,handleReset}) => {
     }  
     const handleToDelete = () =>{
         let localStorageData = JSON.parse(localStorage.getItem("Lista"))
+        // Despues de parsear la lista, busca el indice del array para eliminar su valor
         let productIndexOf = localStorageData.indexOf(product)
         localStorageData.splice(productIndexOf,1)
         localStorage.setItem("Lista",JSON.stringify(localStorageData))
