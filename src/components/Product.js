@@ -9,8 +9,7 @@ const Product = ({product,handleReset}) => {
         const newValue = e.target.id === "ProductForm" ?
         e.target.firstElementChild.value
         :
-        e.target.previousElementSibling.firstElementChild.value
-
+        e.target.parentNode.previousElementSibling.firstElementChild
         let localStorageData = JSON.parse(localStorage.getItem("Lista"))
         // Despues de parsear la lista, busca el indice del array para editar su valor
         let productIndexOf = localStorageData.indexOf(product)
